@@ -1,12 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import LoaderAnimation from "./components/loaderAnimation";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>Hello Food Lab</h1>
-      <h2>jhdviudsvjb</h2>
-    </div>
+      <LoaderAnimation />
+    </div> 
   );
 }
 
