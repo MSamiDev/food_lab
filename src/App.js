@@ -1,4 +1,5 @@
 import LoaderAnimation from "./components/loaderAnimation";
+import "./assets/scss/app.scss";
 
 const App = () => {
   return (
