@@ -2,23 +2,31 @@
 @import "./mixins/mixin.scss";
 
 .loader-animation {
-    @include center;
-    flex-direction: column;
+    //@include center;
+    // flex-direction: column;
+    display: flex;
+    align-items: center;
     height: 100vh;
     width: 100vw;
     background-color: #{$fgWhite};
     margin: 0;
     padding: 0;
     left: 0;
+    position: fixed;
+    z-index: 9999;
 
-    .loader-animation_logo {
+    .loader-animation_left-line {
+        height: 7px;
+        width: 100%;
+        transform: translate(-100%, 0);
+        background: #{$redLine};
+    }
+
+    .loader-animation_name {
         @include center;
-    
-        .loader-animation_left-line {
-            height: 7px;
-            width: 30px;
-            background: #{$greenLine};
-        }
+        height: 100vh;
+        width: 100%;
+        opacity: 0;
 
         .loader-animation_name-food {
             font-family: "Montserrat", sans-serif;
@@ -34,20 +42,12 @@
             color: #{$darkBlack};
             margin: 0.5rem;
         }
-        .loader-animation_right-line {
-            height: 7px;
-            width: 30px;
-            background: #{$redLine};
-        }
     }
-    .loader-animation_percentage{
-        
-        .loader-animation_percentage-number {
-            font-family: "Lato", sans-serif;
-            font-size: 2rem;
-            font-weight: 100;
-            color: #{$fgWhite};
-            margin: 0.5rem;
-        }
+
+    .loader-animation_right-line {
+        height: 7px;
+        width: 100%;
+        transform: translate(100%, 0);
+        background: #{$greenLine};
     }
 }
