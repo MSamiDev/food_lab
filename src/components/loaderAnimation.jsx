@@ -11,19 +11,14 @@ const LoaderAnimation = () => {
   const loader_animation_name_lab = useRef();
 
   useEffect(() => {
-    let t1 = gsap
+    gsap
       .timeline()
       .to(loader_animation_name.current, {
-        duration: 0.5,
+        duration: 1,
         opacity: 1,
+        y: 0,
         ease: "circ.out",
-        delay: 0,
-      })
-      .to(loader_animation_name.current, {
-        duration: 0.5,
-        opacity: 1,
-        ease: "circ.out",
-        delay: 0,
+        delay: .5,
       })
       .to(loader_animation_left_line.current, {
         duration: 1,
@@ -40,7 +35,7 @@ const LoaderAnimation = () => {
       .to(loader_animation.current, {
         duration: 1,
         scale: 2.8,
-        ease: "circ.in",
+        ease: "expo.out",
       });
       
   }, []);

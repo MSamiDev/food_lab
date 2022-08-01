@@ -1,31 +1,68 @@
 @import "./variables/colors.scss";
 @import "./mixins/mixin.scss";
+@import "./variables/fonts.scss";
 
-.heroSection_name {
-    @include center;
+.heroSection {
     height: 100vh;
-    width: 100vw;
+    @include center;
+    overflow: hidden;
 
-    .heroSection_name-food {
-        font-family: "Montserrat", sans-serif;
-        font-size: calc(5rem * 2.8);
-        font-weight: 700;
-        //color: #{$darkBlack};
-        color: transparent;
-        margin: calc(0.5rem * 2.8);
-        background-image: url("../images/pexels-chan-walrus-958545.jpg");
-        background-size: cover;
-        background-clip: text;
+    .heroSection_left-line {
+        height: calc(7px * 2.8);
+        width: 100%;
+
+        transform: translate(-100%, 0);
+        background: #{$redLine};
     }
-    .heroSection_name-lab {
-        font-family: "Montserrat", sans-serif;
-        font-size: calc(5rem * 2.8);
-        font-weight: 200;
-        // color: #{$darkBlack};
-        color: transparent;
-        margin: calc(0.5rem * 2.8);
-        background-image: url("../images/pexels-rajesh-tp-1633578.jpg");
-        background-size: cover;
-        background-clip: text;
+    .heroSection_name {
+        @include center;
+        height: 100vh;
+        width: 100vw;
+        \position: sticky;
+        top: 3px;
+
+        .heroSection_name-food {
+            font-family: $Montserrat;
+            font-size: calc(5rem * 2.8);
+            font-weight: 700;
+            //color: #{$darkBlack};
+            color: transparent;
+            margin: calc(0.5rem * 2.8);
+            background-image: url("../images/pexels-mohammad-sadiq-padela-5528082_AdobeExpress.gif");
+            background-size: cover;
+            background-clip: text;
+            background-position: center;
+        }
+        .heroSection_name-lab {
+            font-family: $Montserrat;
+            font-size: calc(5rem * 2.8);
+            font-weight: 200;
+            //color: #{$darkBlack};
+            //color: transparent;
+            margin: calc(0.5rem * 2.8);
+            //background-image: url("../images/pexels-kelly-lacy-7367890_AdobeExpress.gif");
+            background-size: cover;
+            background-clip: text;
+            background-position: center;
+        }
+    }
+
+    .heroSection_right-line {
+        height: calc(7px * 2.8);
+        width: 100%;
+        transform: translate(100%, 0);
+        background: #{$greenLine};
+    }
+
+    .heroSection_description {
+        @include center;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50px);
+        font-family: $Lato;
+        color: $darkBlack;
     }
 }

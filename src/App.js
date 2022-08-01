@@ -1,6 +1,8 @@
 import LoaderAnimation from "./components/loaderAnimation";
 import React, { useEffect, useRef } from "react";
+//import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./components/home";
+import Nav from "./components/nav";
 import "./assets/scss/app.scss";
 import gsap from "gsap";
 
@@ -8,14 +10,14 @@ const App = () => {
   const loaderRef = useRef(null);
   useEffect(() => {
     gsap.to(loaderRef.current, {
-      duration: 1.5,
+      duration: 1,
       opacity: 0,
-      //display: "none",      
-      ease: "power3.out",
+      //display: "none",
+      ease: "power3.in",
       delay: 3,
     });
     gsap.to(loaderRef.current, {
-      duration: .5,
+      duration: 1,
       display: "none",
       ease: "power3.out",
       delay: 4,
@@ -23,15 +25,15 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <div className="loader" ref={loaderRef}>
-        <LoaderAnimation />
+    
+      <div className="App">
+        <div className="loader" ref={loaderRef}>
+          <LoaderAnimation />
+        </div>
+        <Nav />
+        <Home />
       </div>
-      <Home />
-    </div>
   );
 };
 
 export default App;
-
-                                 

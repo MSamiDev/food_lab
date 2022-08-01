@@ -1,0 +1,30 @@
+@import "./variables/colors.scss";
+@import "./mixins/mixin.scss";
+@import "./variables/fonts.scss";
+
+.nav_container {
+    position: fixed;
+    display: flex;
+    right: 0;
+    z-index: 999;
+    margin: 3em;
+    mix-blend-mode: difference;
+    
+    .nav_list {
+        @include reset-list;
+        @include center;
+        .nav_item {
+            @include reset-list;
+            @include center;
+            margin: 0.5em 1em;
+            font-size: 1.5rem;
+            font-family: $Lato;
+            color: #{$darkBlack};
+            a {
+                @include reset-list;
+                @include center;
+                color: #{$darkBlack};
+            }
+        }
+    }
+}

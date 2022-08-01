@@ -1,5 +1,6 @@
 @import "./variables/colors.scss";
 @import "./mixins/mixin.scss";
+@import "./variables/fonts.scss";
 
 .loader-animation {
     //@include center;
@@ -14,6 +15,8 @@
     left: 0;
     position: fixed;
     z-index: 9999;
+    overflow: hidden;
+
 
     .loader-animation_left-line {
         height: 7px;
@@ -27,6 +30,7 @@
         height: 100vh;
         width: 100%;
         opacity: 0;
+        transform: translate(0px, 50px);
 
         .loader-animation_name-food {
             font-family: "Montserrat", sans-serif;
