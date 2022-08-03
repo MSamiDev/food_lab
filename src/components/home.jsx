@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
-import "../assets/scss/home.scss";
+// import "../assets/scss/components/home.scss";
 import HeroSection from "./heroSection";
-import Photo_Slides from "./photo-slides";
+import PhotoSlides from "./photo-slides";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -32,7 +32,7 @@ const Home = () => {
         </div>
         {/* //please chage the demo className */}
         <div className="photo-slides_container">
-            <Photo_Slides />
+            <PhotoSlides />
         </div>
         <div className="demo">
           <h1>hello</h1>

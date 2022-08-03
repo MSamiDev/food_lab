@@ -43,7 +43,6 @@ const HeroSection = () => {
         // markers: true,
       },
       xPercent: 100,
-
     });
     gsap.to(HeroSection_right_line.current, {
       scrollTrigger: {
@@ -55,9 +54,8 @@ const HeroSection = () => {
         // markers: true,
       },
       xPercent: -100,
-
     });
-    
+
     gsap.to(HeroSection_name_food.current, {
       scrollTrigger: {
         trigger: HeroSection.current,
@@ -92,31 +90,30 @@ const HeroSection = () => {
       duration: 1,
       opacity: 0,
     });
-
   }, []);
 
   return (
-    <div className="heroSection" ref={HeroSection}>
-      <div
-        className="heroSection_left-line"
-        ref={HeroSection_left_line}
-      ></div>
-      <div className="heroSection_name">
+        <div className="heroSection" ref={HeroSection}>
+          <div
+            className="heroSection_left-line"
+            ref={HeroSection_left_line}
+          ></div>
+          <div className="heroSection_name">
         <div className="heroSection_name-food" ref={HeroSection_name_food}>
-          <span>FOOD</span>
+              <span>FOOD</span>
         </div>
         <div className="heroSection_name-lab" ref={HeroSection_name_lab}>
-          <span>LAB</span>
+              <span>LAB</span>
         </div>
-      </div>
-      <div
-        className="heroSection_right-line"
-        ref={HeroSection_right_line}
-      ></div>
+          </div>
+          <div
+            className="heroSection_right-line"
+            ref={HeroSection_right_line}
+          ></div>
       <div className="heroSection_description" ref={heroSection_description}>
-        <h1>Best Cafe in Sangli...!</h1>
-      </div>
-    </div>
+            <h1>Best Cafe in Sangli...!</h1>
+          </div>
+        </div>
   );
 };
 

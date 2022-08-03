@@ -1,6 +1,6 @@
-@import "./variables/colors.scss";
-@import "./mixins/mixin.scss";
-@import "./variables/fonts.scss";
+@import "../variables/colors";
+@import "../mixins/mixin";
+@import "../variables/fonts";
 
 .heroSection {
     height: 100vh;
@@ -28,7 +28,7 @@
             //color: #{$darkBlack};
             color: transparent;
             margin: calc(0.5rem * 2.8);
-            background-image: url("../images/pexels-mohammad-sadiq-padela-5528082_AdobeExpress.gif");
+            background-image: url("../../images/pexels-mohammad-sadiq-padela-5528082_AdobeExpress.gif");
             background-size: cover;
             background-clip: text;
             background-position: center;
@@ -40,7 +40,7 @@
             //color: #{$darkBlack};
             //color: transparent;
             margin: calc(0.5rem * 2.8);
-            //background-image: url("../images/pexels-kelly-lacy-7367890_AdobeExpress.gif");
+            //background-image: url("../../images/pexels-kelly-lacy-7367890_AdobeExpress.gif");
             background-size: cover;
             background-clip: text;
             background-position: center;

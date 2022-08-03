@@ -1,0 +1,35 @@
+@import "./variables/colors";
+@import "./base/reset";
+@import "./variables/fonts";
+
+
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    //    overflow-x: hidden;
+    overscroll-behavior-y: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    position: relative;
+}
+
+
+
+@import "components/heroSection";
+@import "components/home";
+@import "components/Loader-Animation";
+@import "components/nav";
+@import "components/photo-slides";

@@ -1,9 +1,9 @@
-import React, { useRef, useEffect } from "react";
-import "../assets/scss/heroSection.scss";
+import React, {  useEffect } from "react";
+// import "../assets/scss/components/heroSection.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-const Photo_Slides = () => {
+const PhotoSlides = () => {
   
 
   gsap.registerPlugin(ScrollTrigger);
@@ -21,4 +21,4 @@ const Photo_Slides = () => {
   );
 };
 
-export default Photo_Slides;
+export default PhotoSlides;

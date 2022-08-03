@@ -1,9 +1,10 @@
 import LoaderAnimation from "./components/loaderAnimation";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 //import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./components/home";
 import Nav from "./components/nav";
-import "./assets/scss/app.scss";
+import "./assets/scss/main.scss";
 import gsap from "gsap";
 
 const App = () => {
@@ -26,13 +27,13 @@ const App = () => {
 
   return (
     
-      <div className="App">
-        <div className="loader" ref={loaderRef}>
-          <LoaderAnimation />
+        <div className="App">
+            <div className="loader" ref={loaderRef}>
+              <LoaderAnimation />
+            </div>
+              <Nav />
+              <Home />
         </div>
-        <Nav />
-        <Home />
-      </div>
   );
 };
 

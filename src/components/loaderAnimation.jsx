@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
-import "../assets/scss/Loader-Animation.scss";
+// import "../assets/scss/components/Loader-Animation.scss";
 import { gsap } from "gsap";
+import { motion } from "framer-motion";
 
 const LoaderAnimation = () => {
   const loader_animation_left_line = useRef();
@@ -18,7 +19,7 @@ const LoaderAnimation = () => {
         opacity: 1,
         y: 0,
         ease: "circ.out",
-        delay: .5,
+        delay: 0.5,
       })
       .to(loader_animation_left_line.current, {
         duration: 1,
@@ -29,7 +30,7 @@ const LoaderAnimation = () => {
       .to(loader_animation_right_line.current, {
         duration: 1,
         xPercent: -100,
-        ease: "circ.out", 
+        ease: "circ.out",
         delay: -1,
       })
       .to(loader_animation.current, {

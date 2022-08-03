@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import "../assets/scss/nav.scss";
+// import "../assets/scss/components/nav.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
