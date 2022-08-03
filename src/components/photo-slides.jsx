@@ -14,7 +14,9 @@ const Photo_Slides = () => {
 
   return (
     <div className="photo-slides">
-      
+      <div className="photo-slide-1">
+        
+      </div>
     </div>
   );
 };
