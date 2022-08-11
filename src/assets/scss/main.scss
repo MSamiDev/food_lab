@@ -9,8 +9,9 @@ html,
 body {
     margin: 0;
     padding: 0;
-    //    overflow-x: hidden;
+    //overflow-x: hidden;
     overscroll-behavior-y: none;
+    // scrollbar-width: none; /* for Firefox */  
 }
 
 * {
@@ -20,12 +21,17 @@ body {
 }
 
 .app {
+
     margin: 0;
     padding: 0;
     left: 0;
     position: relative;
 }
 
+.Home{
+    //padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    //box-sizing: content-box; /* So the width will be 100% + 17px */
+}
 
 
 @import "components/heroSection";
@@ -33,3 +39,5 @@ body {
 @import "components/Loader-Animation";
 @import "components/nav";
 @import "components/photo-slides";
+@import "components/menu";
+@import "components/contact";

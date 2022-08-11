@@ -1,0 +1,47 @@
+@import "../variables/colors";
+@import "../mixins/mixin";
+@import "../variables/fonts";
+
+.category_menu_left_line {
+    height: 7px;
+    width: 20%;
+    left: 0;
+    top: 55%;
+    position: fixed;
+    background-color: #{$redLine};
+}
+
+    .category_list {
+        height: 100%;
+        width: 100%;
+        // white-space: nowrap;
+        position: absolute;
+        left: 0;
+        margin-top: 20vh;
+        margin-bottom: 40vh;
+        .category_item {
+            font-family: $Lato;
+            font-size: 3rem;
+            font-weight: 300;
+            color: #{$darkBlack};
+            // margin: 30vh;
+            margin-top: 30vh;
+            margin-bottom: 30vh;
+            text-align: center;
+            &:hover {
+                color: #{$redLine};
+            }
+        }
+        .category14{
+            margin-bottom: 50vh;
+        }
+    }
+
+.category_menu_right_line {
+    height: 7px;
+    width: 20%;
+    right: 0;
+    top: 55%;
+    position: fixed;
+    background-color: #{$greenLine};
+}

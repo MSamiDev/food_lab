@@ -18,7 +18,7 @@
         @include center;
         height: 100vh;
         width: 100vw;
-        \position: sticky;
+        position: sticky;
         top: 3px;
 
         .heroSection_name-food {
@@ -28,6 +28,7 @@
             //color: #{$darkBlack};
             color: transparent;
             margin: calc(0.5rem * 2.8);
+            background: #{$darkBlack};
             background-image: url("../../images/pexels-mohammad-sadiq-padela-5528082_AdobeExpress.gif");
             background-size: cover;
             background-clip: text;
@@ -63,6 +64,7 @@
         transform: translate(-50%, -50%);
         transform: translate(-50%, -50px);
         font-family: $Lato;
+        font-size: calc(2rem);
         color: $darkBlack;
     }
 }

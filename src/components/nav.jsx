@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 // import "../assets/scss/components/nav.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -15,7 +16,7 @@ const Nav = () => {
   useEffect(() => {
     gsap.to(nav_item_a1.current, {
       scrollTrigger: {
-        trigger: nav_item.current,
+        trigger: nav_item_a1.current,
         start: "250% 10%",
         end: "600% 10%",
         scrub: 0.5,
@@ -26,7 +27,7 @@ const Nav = () => {
     });
     gsap.to(nav_item_a2.current, {
       scrollTrigger: {
-        trigger: nav_item.current,
+        trigger: nav_item_a2.current,
         start: "250% 10%",
         end: "600% 10%",
         scrub: 0.5,
@@ -42,14 +43,16 @@ const Nav = () => {
       <div className="nav_container" ref={nav_container}>
         <ul className="nav_list" ref={nav_list}>
           <li className="nav_item item1" ref={nav_item}>
-            <a href="/" className="nav_item_a" ref={nav_item_a1}>
-              Menu
-            </a>
+            <Link className="nav_item_a" ref={nav_item_a1} to="/menu">
+                Menu
+              
+            </Link>
           </li>
           <li className="nav_item item2" ref={nav_item}>
-            <a href="/" className="nav_item_a" ref={nav_item_a2}>
-              Contact Us
-            </a>
+            <Link className="nav_item_a" ref={nav_item_a2} to="/contact-us">
+                Contact Us
+              
+            </Link>
           </li>
         </ul>
       </div>

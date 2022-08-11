@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from "react";
-import "../assets/scss/heroSection.scss";
+// import "../assets/scss/heroSection.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+
+import { motion, AnimateSharedLayout, AnimatePresence} from "framer-motion";
 
 const HeroSection = () => {
   const HeroSection = useRef(null);
@@ -11,20 +13,20 @@ const HeroSection = () => {
   const HeroSection_right_line = useRef(null);
   const heroSection_description = useRef(null);
 
-
-
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-
-    
-
+    // gsap.to(HeroSection_name_food.current, {
+    //   backgroundClip: "text",
+    //   background: "transparent",
+    //   duration: 1.6,
+    // });
     gsap.to(HeroSection.current, {
       scrollTrigger: {
         trigger: HeroSection.current,
         start: "20% 10%",
-        end: "60% 10%",
-        scrub: 0.5,
+        end: "80% 10%",
+        scrub: 0.7,
         //pin: true,
         // markers: true,
       },
@@ -37,8 +39,8 @@ const HeroSection = () => {
       scrollTrigger: {
         trigger: HeroSection.current,
         start: "20% 10%",
-        end: "60% 10%",
-        scrub: 0.5,
+        end: "80% 10%",
+        scrub: 0.7,
         //pin: true,
         // markers: true,
       },
@@ -48,8 +50,8 @@ const HeroSection = () => {
       scrollTrigger: {
         trigger: HeroSection.current,
         start: "20% 10%",
-        end: "60% 10%",
-        scrub: 0.5,
+        end: "80% 10%",
+        scrub: 0.7,
         //pin: true,
         // markers: true,
       },
@@ -60,8 +62,8 @@ const HeroSection = () => {
       scrollTrigger: {
         trigger: HeroSection.current,
         start: "20% 10%",
-        end: "60% 20%",
-        scrub: 0.5,
+        end: "80% 20%",
+        scrub: 0.7,
         // markers: true,
       },
       duration: 1,
@@ -71,8 +73,8 @@ const HeroSection = () => {
       scrollTrigger: {
         trigger: HeroSection.current,
         start: "20% 10%",
-        end: "60% 10%",
-        scrub: 0.5,
+        end: "80% 10%",
+        scrub: 0.7,
         // markers: true,
       },
       duration: 1,
@@ -83,8 +85,8 @@ const HeroSection = () => {
         trigger: HeroSection.current,
         toggleActions: "restart reverse reverse pause",
         start: "20% 10%",
-        end: "60% 10%",
-        scrub: 0.5,
+        end: "80% 10%",
+        scrub: 0.7,
         // markers: true,
       },
       duration: 1,
@@ -93,27 +95,33 @@ const HeroSection = () => {
   }, []);
 
   return (
+    <AnimateSharedLayout type="crossfade">
+      <AnimatePresence>
         <div className="heroSection" ref={HeroSection}>
           <div
             className="heroSection_left-line"
             ref={HeroSection_left_line}
           ></div>
           <div className="heroSection_name">
-        <div className="heroSection_name-food" ref={HeroSection_name_food}>
+            <div className="heroSection_name-food" ref={HeroSection_name_food}>
               <span>FOOD</span>
-        </div>
-        <div className="heroSection_name-lab" ref={HeroSection_name_lab}>
+            </div>
+            <div className="heroSection_name-lab" ref={HeroSection_name_lab}>
               <span>LAB</span>
-        </div>
+            </div>
           </div>
           <div
             className="heroSection_right-line"
             ref={HeroSection_right_line}
           ></div>
-      <div className="heroSection_description" ref={heroSection_description}>
-            <h1>Best Cafe in Sangli...!</h1>
+          <div 
+          className="heroSection_description"
+          ref={heroSection_description}
+          ><h1>Best Cafe in Sangli...!</h1>
           </div>
         </div>
+      </AnimatePresence>
+    </AnimateSharedLayout>
   );
 };
 

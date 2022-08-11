@@ -21,7 +21,7 @@
     .loader-animation_left-line {
         height: 7px;
         width: 100%;
-        transform: translate(-100%, 0);
+        
         background: #{$redLine};
     }
 
@@ -29,8 +29,8 @@
         @include center;
         height: 100vh;
         width: 100%;
-        opacity: 0;
-        transform: translate(0px, 50px);
+        opacity: 1;
+        //transform: translate(0px, 50px);
 
         .loader-animation_name-food {
             font-family: "Montserrat", sans-serif;
@@ -51,7 +51,7 @@
     .loader-animation_right-line {
         height: 7px;
         width: 100%;
-        transform: translate(100%, 0);
+        
         background: #{$greenLine};
     }
 }
